@@ -1,0 +1,98 @@
+body
+{
+  font-family: 'Roboto', sans-serif !important;
+  padding-top: 70px;
+}
+
+input
+{
+  font-size: 14px !important;
+}
+
+select
+{
+  font-size: 14px !important;
+}
+
+html
+{
+	overflow-y: scroll !important;
+}
+form
+{
+		font-size: 14px !important;
+}
+
+.panel
+{
+    top: 50%;
+    left: 50%;
+}
+
+
+.btn
+{
+	font-size: 13px;
+}
+
+.navbar-default {
+  box-shadow: none;
+}
+
+
+.form-control::-webkit-input-placeholder
+{
+	font-size: 14px;
+}
+.form-control:-moz-placeholder
+{
+	font-size: 14px;
+}
+.form-control::-moz-placeholder
+{
+	font-size: 14px;
+}
+.form-control:-ms-input-placeholder
+{
+	font-size: 14px;
+}
+
+
+
+p
+{
+	font-size: 14px !important;
+}
+td
+{
+	font-size: 14px !important;
+}
+th
+{
+	font-size: 14px !important;
+}
+
+dl{
+		font-size: 14px !important;
+}
+
+
+.navbar
+{
+ 	background:rgba(255,255,255,0.8);
+}
+
+
+
+.navbar-brand {
+  background: url() center / contain no-repeat;
+  width: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+  right: 50%;
+  position: absolute;
+}
+
+.glyphicon{
+  padding-right: 5px;
+}
