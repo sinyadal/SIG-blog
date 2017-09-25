@@ -8,6 +8,11 @@
 <div class="container col-md-6 col-md-offset-3"> 
   <div class="row"> 
     <div class="col-md-12">
+    <form action="search" method="POST">
+        {{ csrf_field() }}
+        <input name="search" type="text" class="form-control input-sm" placeholder="Search..">
+
+    </form>
       <h3 class="text-center">SiG Blog</h3>
 
         @foreach($posts as $post)

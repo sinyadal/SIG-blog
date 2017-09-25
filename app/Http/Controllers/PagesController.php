@@ -57,4 +57,13 @@ class PagesController extends Controller {
 		return redirect('/');
 	}
 
+	public function search(Request $request) {
+
+		$input = $request->search;
+
+		$posts = Post::where('title', 'LIKE', '%'.$input.'%')->orderBy('created_at', 'desc')->get();
+
+		return view('pages.welcome')->withPosts($posts);
+	}
+
 }

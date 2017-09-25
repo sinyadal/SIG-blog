@@ -50,3 +50,4 @@ Route::get('/', 'PagesController@getIndex');
 // Posts Routes
 Route::resource('posts', 'PostController');
 
+Route::post('search', 'PagesController@search');
