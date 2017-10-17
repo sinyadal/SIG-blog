@@ -6,20 +6,22 @@
 </head>
 
 <style>
-body 
+body
 {
   padding-top: 0px;
-    background: #5C5757; 
+    background: #5C5757;
 }
 </style>
 
 <body>
-    
+
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4" style="padding-top:15%;">
             <div class="panel panel-default">
-                <div class="panel-heading"><h5 style="text-align:center;"">Login</h5></div>
+                <div class="panel-heading">
+
+                </div>
                 <div class="panel-body">
                 <br>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
@@ -70,7 +72,7 @@ body
                             </div>
                             <div class="col-md-6 col-md-offset-1">
                                 <a href="{{ route('password.request') }}" class="btn btn-link">Forgot Password?</a>
- 
+
                             </div>
                             <div class="col-md-4">
                             <a href="/" class="btn btn-link btn-block">Back</a>
@@ -90,8 +92,3 @@ body
 
 </body>
 </html>
-
-
-
-
-

@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container col-md-6 col-md-offset-3">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<h3 style="text-align:center;">Blog</h3>
@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="well">
-		
+
 				@foreach ($posts as $post)
 
 				<dl>
@@ -29,7 +29,7 @@
 
 				@endforeach
 
-			</div>	
+			</div>
 		</div>
 	</div>
 

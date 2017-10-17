@@ -48,11 +48,10 @@ tinyMCE.triggerSave(); // This shit save the item zzzzz
 
 @section('content')
 
-<div class="container col-md-6 col-md-offset-3">
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <h3 style="text-align:center;">Create Posts</h3>
-            <hr>
 
             <div class="panel panel-default">
                 <div class="panel-body">

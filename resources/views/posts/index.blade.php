@@ -3,12 +3,12 @@
 @section('title', '| All posts')
 
 @section('content')
-	
-	<div class="container col-md-6 col-md-offset-3">
-		<div class="row">	
+
+	<div class="container">
+		<div class="row">
 			<div class="col-md-12">
-				<h3 style="text-align:center;">All Posts</h3>
-				<hr>
+				<h3 style="text-align:center;">DASHBOARD</h3>
+
 			</div>
 
 			<div class="col-md-12">
@@ -26,12 +26,14 @@
 	                </div>
                 </div>
 			</div>
-		
+
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<table class="table">
+				<div class=" panel panel-default">
+					<div class="panel-body">
+				<table  class="table table-striped">
 					<thead>
 						<th>Title</th>
 						<th>Body</th>
@@ -57,10 +59,13 @@
 
 					</tbody>
 				</table>
-				<div class="row text-center"> 
+				<div class="row text-center">
 					{!! $posts->links(); !!} <!-- Pagination button -->
 					<!-- <p>Page doublecurl $posts->currentPage() }} of {doublecurl $posts->lastPage() }}</p>  -->
 				</div>
+			</div>
+		</div>
+
 			</div>
 		</div>
 	</div>

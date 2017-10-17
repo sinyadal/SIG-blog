@@ -4,13 +4,12 @@
 
 @section('content')
 
-<div class="container col-md-6 col-md-offset-3">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 
 			<h3 style="text-align:center;">Categories</h3>
-			<hr>
-			
+
 			<div class=" panel panel-default">
 				<div class="panel-body">
 					<form role="form" method="POST" action="{{ route('categories.store') }}">
@@ -18,7 +17,7 @@
 	                    <div class="col-md-8">
 	                    	<input type="text" class="form-control" placeholder="New Category" name="name" value="{{ old('name') }}" required>
 	                    </div>
-	                    
+
 	                    <div class="col-md-4">
 	                        <button type="submit" class="btn btn-primary btn-block">
 	                            Create
@@ -27,8 +26,10 @@
 	                </form>
                 </div>
             </div>
-			
-			<table class="table">
+
+						<div class=" panel panel-default">
+							<div class="panel-body">
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -52,6 +53,8 @@
 					@endforeach
 				</tbody>
 			</table>
+		</div>
+	</div>
 		</div>
 	</div>
 </div>

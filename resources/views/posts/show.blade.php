@@ -17,12 +17,13 @@
 
 @section('content')
 
-<div class="container col-md-6 col-md-offset-3">
-	
+<div class="container">
+
 	<div class="row">
 
 		<div class="col-md-4">
-			<div class="well">
+      <div class=" panel panel-default">
+				<div class="panel-body">
 
 				<dl>
 					<dt>Category: </dt>
@@ -48,17 +49,22 @@
 
 				<div class="row">
 					<div class="col-sm-12">
-						{!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-default btn-block', 'style' => 'margin-bottom: 5px;')) !!}
+						{!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-success btn-block', 'style' => 'margin-bottom: 5px;')) !!}
 
-						<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal">Delete</button>
+						<button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal">Delete</button>
 
 						{!! Html::linkRoute('posts.index', 'Back', array($post->id), array('class' => 'btn btn-default btn-block')) !!}
 					</div>
 				</div>
 			</div>
+    </div>
+
 		</div>
 
 		<div class="col-md-8">
+
+      <div class=" panel panel-default">
+				<div class="panel-body">
 
 		@if($post->image == null)
 
@@ -67,13 +73,16 @@
 		@endif
 
 			<h3>{{ $post->title }}</h3>
-			<br>
-			<p>{!! $post->body !!}</p>
 			<hr>
+			<p>{!! $post->body !!}</p>
 
+    </div>
+  </div>
 
-			<div id="backend-comments" style="margin-top: 50px;">
-				<h3>Comment <small>{{ $post->comments()->count() }} total</small></h3>
+  <div class=" panel panel-default">
+    <div class="panel-body">
+			<div id="backend-comments" >
+				<h4>Comment <small>{{ $post->comments()->count() }} total</small></h4>
 
 				<table class="table">
 					<thead>
@@ -100,36 +109,8 @@
 					</tbody>
 				</table>
 			</div>
-		
+    </div>
+  </div>
 		</div>
-	<!-- Modal -->
-		<div id="myModal" class="modal fade" role="dialog">
-		  	<div class="modal-dialog">
-
-		    	<!-- Modal content-->
-		    	<div class="modal-content">
-		      		<div class="modal-header">
-		        		<h4 class="modal-title text-center">Confirm Deletion?</h4>
-		      		</div>
-
-		      		<div class="modal-footer">
-			      		<div class="row">
-			      			<div class="col-md-6">
-				      			{!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'DELETE', 'style' => 'margin-bottom: 5px;']) !!}
-								{!! Form::submit('Delete', ['class' => 'btn btn-default btn-block']) !!}
-								{!! Form::close() !!}
-				      		</div>
-				      		<div class="col-md-6">
-				      			<a type="button" class="btn btn-default btn-block" data-dismiss="modal">Cancel</a>
-				      		</div>
-			      		</div>
-
-		      		</div>
-		    	</div>
-		  	</div>
-		</div> <!-- End Modal -->
-	</div>
-</div>
-
 
 @endsection

@@ -47,14 +47,15 @@ tinyMCE.triggerSave(); // This shit save the item zzzzz
 
 @section('content')
 
-{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true]) !!} 
+{!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true]) !!}
 
-<div class="container col-md-6 col-md-offset-3">
+<div class="container">
 
 	<div class="row">
 
 		<div class="col-md-4">
-			<div class="well">
+      <div class=" panel panel-default">
+				<div class="panel-body">
 
 				<dl >
 					<dt>Created at: </dt>
@@ -70,14 +71,16 @@ tinyMCE.triggerSave(); // This shit save the item zzzzz
 
 				<div class="row">
 					<div class="col-sm-12"><!-- Model Form Binding --> <!-- PATCH or PUT method for update -->
-						
+
 						{{ Form::submit('Save', ['class' => 'btn btn-success btn-block']) }}
 						{!! Html::linkRoute('posts.show', 'Cancel', array($post->id), array('class' => 'btn btn-default btn-block')) !!}
 					</div>
 				</div>
 			</div>
 		</div>
-		
+  </div>
+    
+
 
     	<div class="col-md-8">
 	    	<div class="panel panel-default">

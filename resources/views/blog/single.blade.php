@@ -21,10 +21,10 @@
 		height: 50px;
 		float: left;
 	}
-	.author-name 
+	.author-name
 	{
 		float: left;
-		margin-left: 15px; 
+		margin-left: 15px;
 	}
 	.author-name>h4
 	{
@@ -43,7 +43,7 @@
 
 @section('content')
 
-<div class="container col-md-6 col-md-offset-3">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			@if($post->image == null)
@@ -108,5 +108,5 @@
 		</div>
 	</div>
 </div>
-	
+
 @endsection
