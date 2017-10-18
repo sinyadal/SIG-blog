@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 /*
 | process variable data or params
@@ -12,6 +12,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 use Mail;
 use Session;
 
@@ -21,7 +22,10 @@ class PagesController extends Controller {
 
 		// Query Builder/ Post feeds
 		$posts = Post::orderBy('created_at', "desc")->limit(8)->get();
-		return view('pages.welcome')->withPosts($posts);
+
+		$categories = Category::orderBy('id', 'desc')->limit(5)->get();
+
+		return view('pages.welcome', compact('posts', 'categories'));
 	}
 
 	public function getAbout() {
@@ -62,8 +66,9 @@ class PagesController extends Controller {
 		$input = $request->search;
 
 		$posts = Post::where('title', 'LIKE', '%'.$input.'%')->orderBy('created_at', 'desc')->get();
-
-		return view('pages.welcome')->withPosts($posts);
+		$categories = Category::orderBy('id', 'desc')->limit(5)->get();
+		
+		return view('pages.welcome', compact('posts', 'categories'));
 	}
 
 }
