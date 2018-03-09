@@ -38,7 +38,7 @@ Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' =>
 Route::delete('comments/{id}', ['uses' => 'CommentsController@destroy', 'as' => 'comments.destroy']);
 
 // Tag Route
-Route::resource('tags', 'TagController', ['except' => ['create']]); 
+// Route::resource('tags', 'TagController', ['except' => ['create']]); 
 
 // Pages Routes
 Route::get('contact', 'PagesController@getContact');
